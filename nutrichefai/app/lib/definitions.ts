@@ -1,18 +1,20 @@
 export type Recipe = {
     id: number;
+    user_id: number;
     title: string;
     overview: string;
     cooking_time: number;
 }
 
 export type RecipeStep = {
-    id: number;
+    recipe_id: number;
     step_num: number;
     description: string;
 }
 
 export type NutritionFact = {
-    id: number;
+    nutrition_id: number;
+    recipe_id: number;
     calories: number;
     proteins: number;
     fats: number;
@@ -27,6 +29,11 @@ export type Ingredient = {
 export type PerishableIngredient = {
     id: number;
     shelf_life: number;
+}
+
+export type RecipeIngredient = {
+    recipe_id: number;
+    ingredient_id: number;
 }
 
 export type Allergen = {
@@ -73,9 +80,4 @@ export type RecipeDietaryRestriction = {
 export type User = {
     id: number;
     name: string;
-}
-
-export type UserRecipe = {
-    user_id: number;
-    recipe_id: number;
 }
