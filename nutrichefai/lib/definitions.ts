@@ -2,7 +2,7 @@ export type Recipe = {
     id: number;
     user_id: number;
     title: string;
-    overview: string;
+    description: string;
     cooking_time: number;
 }
 
