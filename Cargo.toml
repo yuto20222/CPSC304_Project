@@ -1,0 +1,7 @@
+[package]
+name = "project_g1d4h_t9z3e_v4k9h-1"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+vessel = "0.0.1"
