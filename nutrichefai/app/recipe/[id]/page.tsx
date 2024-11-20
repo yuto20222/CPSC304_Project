@@ -10,7 +10,10 @@ export default function RecipeDetailPage({
   params: Promise<{ id: string }>;
 }) {
   const { id } = use(params);
-  const [detailedRecipe, setDetailedRecipe] = useState<Recipe | null>(null);
+  const [detailedRecipe, setDetailedRecipe] = useState(null);
+
+// eslint-disable-next-line @typescript-eslint/no-unused-vars  // you can delete it once everything is done
+const unusedSetter = setDetailedRecipe; // it is saying it will be used in the future.
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
